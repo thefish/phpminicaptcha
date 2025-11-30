@@ -1,0 +1,23 @@
+{
+    "name": "thefish/phpminicaptcha",
+    "description": "Minimal (preferably one-file) captcha module, allows to require catcha completion an action",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Spliff\\Utils\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "thefish",
+            "email": "thefish@zaar.be",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email":"thefish@zaar.be",
+        "telegram":"https://t.me/justthefish"
+    },
+    "license":"MIT",
+    "require": {}
+}
