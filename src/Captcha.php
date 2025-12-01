@@ -122,7 +122,7 @@ class Captcha
             return true;
         }
         if (isset($_POST['captcha_challenge'])
-            && $_POST['captcha_challenge'] == $_SESSION['captcha_text']) {
+            && strtolower($_POST['captcha_challenge']) == strtolower($_SESSION['captcha_text'])) {
             unset($_SESSION['captcha_text']);
             $_SESSION['captcha_valid_till'] = strtotime(date('Y-m-d H:i:s').' +'.$this->doNotAskTime);
 
