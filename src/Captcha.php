@@ -8,7 +8,7 @@ class Captcha
 {
     private const PERMITTED_CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-    private Captcha $instance;
+    private static Captcha $instance;
 
     public string $doNotAskTime;
 
@@ -18,12 +18,12 @@ class Captcha
 
     public function newInstance(): Captcha
     {
-        if (empty($this->instance)) {
+        if (empty(self::$instance)) {
             $c = new Captcha;
             $c->length = 5;
             $c->doNotAskTime = '5 min';
             $c->DefaultFonts();
-            $this->instance = $c;
+            self::$instance = $c;
         }
 
         return $this->instance;
