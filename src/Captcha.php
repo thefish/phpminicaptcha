@@ -47,7 +47,7 @@ class Captcha
             throw new CaptchaException('font not present at '.$file);
         }
         $mimeType = mime_content_type($file);
-        if (! in_array($mimeType, ['application/x-font-ttf', 'font/ttf'])) {
+        if (! in_array($mimeType, ['application/x-font-ttf', 'font/ttf', 'font/sfnt'])) {
             throw new CaptchaException('attempted to load non-ttf font');
         }
         $this->fonts[] = $file;
