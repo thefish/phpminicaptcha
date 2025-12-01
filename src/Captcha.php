@@ -26,7 +26,7 @@ class Captcha
             self::$instance = $c;
         }
 
-        return $this->instance;
+        return self::$instance;
     }
 
     public function DefaultFonts(): Captcha
