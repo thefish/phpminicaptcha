@@ -51,6 +51,8 @@ class Captcha
             throw new CaptchaException('attempted to load non-ttf font');
         }
         $this->fonts[] = $file;
+
+        return $this;
     }
 
     public function Image(string $permitted = ''): string
