@@ -118,7 +118,7 @@ class Captcha
         if (
             isset($_SESSION['captcha_valid_till'])
         ) {
-            if (strtotime($_SESSION['captcha_valid_till']) >= time()) {
+            if ($_SESSION['captcha_valid_till'] >= time()) {
                 return true;
             } else {
                 unset($_SESSION['captcha_valid_till']);
