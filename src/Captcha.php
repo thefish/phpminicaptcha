@@ -34,7 +34,7 @@ class Captcha
         $path = __DIR__.'/../fonts/';
         $fs = array_values(array_diff(scandir($path), ['..', '.']));
         foreach ($fs as $f) {
-            $this->AddFont($f);
+            $this->AddFont($path.$f);
         }
 
         return $this;
