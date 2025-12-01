@@ -43,7 +43,7 @@ class Captcha
     public function AddFont(string $file): Captcha
     {
         // $fileSize = filesize($file);
-        if (! file_exists($$file)) {
+        if (! file_exists($file)) {
             throw new CaptchaException('font not present at '.$file);
         }
         $mimeType = mime_content_type($file);
