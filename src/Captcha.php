@@ -120,8 +120,6 @@ class Captcha
         ) {
             if ($_SESSION['captcha_valid_till'] >= time()) {
                 return true;
-            } else {
-                unset($_SESSION['captcha_valid_till']);
             }
         }
         if (isset($_POST['captcha_challenge'])
