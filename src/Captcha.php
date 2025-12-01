@@ -142,7 +142,8 @@ class Captcha
             $input = PERMITTED_CHARS;
         }
 
-        return substr(str_shuffle(str_repeat($input, ceil($len / strlen($input)))), 1, $len);
+        return substr(str_shuffle($input), 0, $len);
+        // return substr(str_shuffle(str_repeat($input, ceil($len / strlen($input)))), 1, $len);
     }
 }
 
