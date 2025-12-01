@@ -19,5 +19,7 @@
         "telegram":"https://t.me/justthefish"
     },
     "license":"MIT",
-    "require": {}
+    "require": {
+        "ext-gd":"*",
+    }
 }
